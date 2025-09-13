@@ -1,0 +1,22 @@
+{
+ "action": "Show Form Tour",
+ "action_label": "Explore Settings",
+ "creation": "2025-09-02 18:46:14.230704",
+ "description": "<h3>Checklist Settings</h3>\n\nChecklist Settings consists of major settings related to task workflows, recurring activities, and daily routines. Click on Explore, to configure and manage your Checklist Settings.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "form_tour": "Checklist Settings",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 1,
+ "is_skipped": 0,
+ "modified": "2025-09-03 11:09:34.858286",
+ "modified_by": "Administrator",
+ "name": "Checklist Settings",
+ "owner": "Administrator",
+ "reference_document": "Checklist Settings",
+ "show_form_tour": 1,
+ "show_full_form": 1,
+ "title": "Checklist Settings",
+ "validate_action": 0
+}

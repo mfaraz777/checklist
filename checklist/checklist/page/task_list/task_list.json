@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-03-29 01:12:04.248760",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 6,
+ "modified": "2025-05-27 14:28:58.451660",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "task-list",
+ "owner": "Administrator",
+ "page_name": "task-list",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1,
+ "title": "Tasks"
+}

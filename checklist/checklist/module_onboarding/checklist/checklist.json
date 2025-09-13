@@ -1,0 +1,32 @@
+{
+ "allow_roles": [
+  {
+   "role": "Checklist Admin"
+  }
+ ],
+ "creation": "2025-09-02 18:16:46.754465",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "Url",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2025-09-03 12:13:54.436545",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Checklist",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Create Master Task"
+  },
+  {
+   "step": "Create Holiday list"
+  },
+  {
+   "step": "Checklist Settings"
+  }
+ ],
+ "subtitle": "From Daily Checklists to Complex Recurring Tasks \u2014 All in One Place.",
+ "success_message": "The Checklist Module is all set up!",
+ "title": "Let's Set Up the Checklist Module. "
+}

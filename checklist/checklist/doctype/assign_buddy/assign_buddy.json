@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-02 12:38:18.147707",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date_range_section",
+  "start_date",
+  "end_date",
+  "buddy_details_section",
+  "buddy_username",
+  "buddy_fullname",
+  "self_section",
+  "assigner_username",
+  "assigner_fullname",
+  "amended_from",
+  "task_list_section",
+  "tasks",
+  "section_break_lgyv",
+  "approver"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_range_section",
+   "fieldtype": "Section Break",
+   "label": "Date Range"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buddy_details_section",
+   "fieldtype": "Section Break",
+   "label": "Buddy Details"
+  },
+  {
+   "fieldname": "self_section",
+   "fieldtype": "Section Break",
+   "label": "Assigner Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assign Buddy",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "buddy_username",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Username",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "buddy_username.full_name",
+   "fieldname": "buddy_fullname",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assigner_username",
+   "fieldtype": "Link",
+   "label": "Username",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "assigner_username.full_name",
+   "fieldname": "assigner_fullname",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lgyv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Data",
+   "label": "Approver",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task_list_section",
+   "fieldtype": "Section Break",
+   "label": "Task List"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "Assign Buddy Task",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-07 18:30:38.007385",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Assign Buddy",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Checklist User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Checklist Admin",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

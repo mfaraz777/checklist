@@ -1,0 +1,95 @@
+{
+ "charts": [
+  {
+   "chart_name": "Department Wise Tasks",
+   "label": "Department Wise Tasks"
+  },
+  {
+   "chart_name": "Employee Wise Tasks",
+   "label": "Employee Wise Tasks"
+  }
+ ],
+ "content": "[{\"id\":\"EifoCwZYB4\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Checklist\",\"col\":12}},{\"id\":\"GFQuhe0D1N\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Shortcut Links</span>\",\"col\":12}},{\"id\":\"nBQg7vF3Dq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task List\",\"col\":3}},{\"id\":\"lrhH_1RquL\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Master Tasks\",\"col\":3}},{\"id\":\"dYkVZEivQN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Checklist Configurations\",\"col\":3}},{\"id\":\"qhI3jo_iwV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Employee Task Summary\",\"col\":3}},{\"id\":\"PpxFcHpTQO\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kEC7NZc5tp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"MCqLgL8j2e\",\"type\":\"paragraph\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Insights</span>\",\"col\":12}},{\"id\":\"NEHYrlcpdc\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Open Tasks\",\"col\":3}},{\"id\":\"EYiUghACnk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Tasks\",\"col\":3}},{\"id\":\"JA3_tAdUAL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Overdue Tasks\",\"col\":3}},{\"id\":\"bhvpbOjbmS\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Ontime Completed Tasks\",\"col\":3}},{\"id\":\"5dcSAO3udS\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Department Wise Tasks\",\"col\":6}},{\"id\":\"z6v0PssAWU\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Employee Wise Tasks\",\"col\":6}}]",
+ "creation": "2025-05-25 15:02:33.797086",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "milestone",
+ "idx": 7,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Checklist",
+ "links": [],
+ "modified": "2025-09-02 18:20:02.551110",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Checklist",
+ "number_cards": [
+  {
+   "label": "Open Tasks",
+   "number_card_name": "Open Tasks"
+  },
+  {
+   "label": "Completed Tasks",
+   "number_card_name": "Completed Tasks"
+  },
+  {
+   "label": "Ontime Completed Tasks",
+   "number_card_name": "Ontime Completed Tasks"
+  },
+  {
+   "label": "Overdue Tasks",
+   "number_card_name": "Overdue Tasks"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "Checklist User"
+  }
+ ],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Task List",
+   "link_to": "task-list",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Employee Task Summary",
+   "link_to": "employee-task-summary",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Master Tasks",
+   "link_to": "Master Tasks",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Checklist Configurations",
+   "link_to": "Checklist Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Checklist"
+}

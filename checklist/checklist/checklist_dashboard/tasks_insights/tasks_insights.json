@@ -1,0 +1,25 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Employee Wise Tasks",
+   "width": "Full"
+  },
+  {
+   "chart": "Department Wise Tasks",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-05-26 01:28:32.482343",
+ "dashboard_name": "Tasks Insights",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 16,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-05-27 19:14:20.254896",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Tasks Insights",
+ "owner": "Administrator"
+}

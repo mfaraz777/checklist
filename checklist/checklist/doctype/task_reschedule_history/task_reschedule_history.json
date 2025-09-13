@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-07 19:34:11.345432",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rescheduled_on",
+  "from_date",
+  "to_date",
+  "rescheduled_by",
+  "reschedule_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date"
+  },
+  {
+   "fieldname": "rescheduled_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Rescheduled on"
+  },
+  {
+   "fieldname": "rescheduled_by",
+   "fieldtype": "Link",
+   "label": "Rescheduled by",
+   "options": "User"
+  },
+  {
+   "fieldname": "reschedule_remarks",
+   "fieldtype": "Small Text",
+   "label": "Reschedule Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-12 11:58:28.526670",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Task Reschedule History",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

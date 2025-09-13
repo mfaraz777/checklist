@@ -1,0 +1,161 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:subject",
+ "creation": "2025-03-27 14:35:15.030490",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "master_task_section",
+  "task_type",
+  "subject",
+  "section_break_nmba",
+  "interval_unit",
+  "repeat_interval",
+  "repeat_days",
+  "column_break_djwq",
+  "year_repeat_type",
+  "month_repeat_type",
+  "basic_details_section",
+  "start_date",
+  "column_break_fqov",
+  "end_date",
+  "section_break_fybt",
+  "details"
+ ],
+ "fields": [
+  {
+   "fieldname": "master_task_section",
+   "fieldtype": "Section Break",
+   "label": "Master Task"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "default": "Recurring",
+   "fieldname": "task_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Task Type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.task_type == \"One-Time\"",
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "column_break_fqov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text Editor",
+   "label": "Details"
+  },
+  {
+   "fieldname": "section_break_fybt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "interval_unit",
+   "fieldtype": "Data",
+   "label": "Interval Unit"
+  },
+  {
+   "fieldname": "section_break_nmba",
+   "fieldtype": "Section Break",
+   "hidden": 1
+  },
+  {
+   "fieldname": "repeat_interval",
+   "fieldtype": "Data",
+   "label": "Repeat Interval"
+  },
+  {
+   "fieldname": "year_repeat_type",
+   "fieldtype": "JSON",
+   "label": "Year Repeat Type"
+  },
+  {
+   "fieldname": "month_repeat_type",
+   "fieldtype": "JSON",
+   "label": "Month Repeat Type"
+  },
+  {
+   "fieldname": "repeat_days",
+   "fieldtype": "Data",
+   "label": "Repeat Days"
+  },
+  {
+   "fieldname": "column_break_djwq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "max_attachments": 10,
+ "modified": "2025-09-12 20:21:32.517388",
+ "modified_by": "Administrator",
+ "module": "Checklist",
+ "name": "Recurring Task Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Checklist Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1
+}

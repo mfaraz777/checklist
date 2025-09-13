@@ -1,0 +1,22 @@
+{
+ "action": "Create Entry",
+ "action_label": "Let's Make First Master Entry",
+ "creation": "2025-09-02 18:15:48.986464",
+ "description": "<h3>Master Task</h3>\n\nA Master Task represents the main unit of work that can be planned, tracked, and repeated within your organization. You can manage the Master Task records to define task details, ownership, timelines, and recurrence settings. It captures the subject, description, priority, assigned users, deadlines, and rules for daily or recurring execution.",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "form_tour": "Checklist Settings",
+ "idx": 1,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2025-09-02 19:00:46.907199",
+ "modified_by": "Administrator",
+ "name": "Create Master Task",
+ "owner": "Administrator",
+ "reference_document": "Master Tasks",
+ "show_form_tour": 0,
+ "show_full_form": 1,
+ "title": "Create Master Task",
+ "validate_action": 1
+}
