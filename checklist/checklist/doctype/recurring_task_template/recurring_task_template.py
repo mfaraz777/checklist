@@ -7,8 +7,7 @@ from frappe.model.document import Document
 from frappe.utils import now_datetime
 from frappe.query_builder import DocType, functions as fn
 import json
-
-
+from datetime import date
 class RecurringTaskTemplate(Document):
 
     def validate(self):
@@ -41,6 +40,20 @@ def save_recurring_settings(docname, data):
 
 @frappe.whitelist()
 def create_master_task(doc):
+
+    if not frappe.db.exists("Employee", {"user_id": "Administrator"}):
+        admin_employee = frappe.new_doc("Employee")
+        admin_employee.first_name = "Administrator"
+        admin_employee.gender = "Male"
+        admin_employee.date_of_birth = date(2000, 1, 1)
+        admin_employee.date_of_joining = date.today()
+        admin_employee.status = "Active"
+        admin_employee.user_id = "Administrator"
+        admin_employee.company = frappe.get_all("Company", pluck="name", order_by="creation asc", limit=1)[0]
+        admin_employee.create_user_permission = 0
+        admin_employee.insert()
+
+
     data = json.loads(doc) if isinstance(doc, str) else doc
 
     new_doc = frappe.new_doc("Master Tasks")

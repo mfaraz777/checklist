@@ -803,42 +803,45 @@ function editRepeatDialog(frm, options = {}) {
 }
 
 frappe.ui.form.on("Recurring Task Template", {
-	refresh: function (frm) {
+    refresh: function(frm) {
+        if (frm.doc.task_type === "Recurring") {
+            frm.add_custom_button(__('Set Recurring'), function () {
+                const saved_data = {
+                    start_date: frm.doc.start_date,
+                    end_date: frm.doc.end_date,
+                    repeat_interval: frm.doc.repeat_interval,
+                    interval_unit: frm.doc.interval_unit,
+                    repeat_days: JSON.parse(frm.doc.repeat_days || "[]"),
+                    monthly_repeat_type: frm.doc.month_repeat_type,
+                    yearly_repeat_type: frm.doc.year_repeat_type,
+                };
+                editRepeatDialog(frm, saved_data);
+            }, null);
+        }
+
         if (!frm.is_new() && frm.doc.docstatus === 0) {
-            frm.add_custom_button(__('Create Tasks'), function() {
+            let btn = frm.add_custom_button(__('Create Tasks'), function () {
                 frappe.call({
                     method: "checklist.checklist.doctype.recurring_task_template.recurring_task_template.create_master_task",
-                    args: {
-                        doc: frm.doc
-                    },
+                    args: { doc: frm.doc },
                     freeze: true,
                     freeze_message: __("Creating..."),
                     callback: function(r) {
-                        if (!r.exc) {
-                            frappe.msgprint(__("Tasks Created Successfully!"));
-                        }
+                        if (!r.exc) frappe.msgprint(__('Success'));
                     }
                 });
-            }, __("Actions")); // "Actions" makes a group dropdown; remove if you want button directly visible
+            }, null); // no group
+
+            $(btn).addClass('btn-primary');
+            
+            $(btn).parent().css('float', 'right');
         }
-		if (frm.doc.task_type === "Recurring") {
-			frm.add_custom_button(__("Set Recurring"), function () {
-				const saved_data = {
-					start_date: frm.doc.start_date,
-					end_date: frm.doc.end_date,
-					repeat_interval: frm.doc.repeat_interval,
-					interval_unit: frm.doc.interval_unit,
-					repeat_days: JSON.parse(frm.doc.repeat_days || "[]"),
-					monthly_repeat_type: frm.doc.month_repeat_type,
-					yearly_repeat_type: frm.doc.year_repeat_type,
-				};
-				editRepeatDialog(frm, saved_data);
-			});
-		}
-	},
-	task_type: function (frm) {
-		if (frm.doc.task_type === "Recurring") {
-			openRepeatDialog(frm);
-		}
-	},
+    },
+
+    task_type: function(frm) {
+        if (frm.doc.task_type === "Recurring") {
+            openRepeatDialog(frm);
+        }
+    },
 });
+

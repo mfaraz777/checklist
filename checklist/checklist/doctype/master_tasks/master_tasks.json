@@ -14,6 +14,7 @@
   "subject",
   "target_date",
   "task_assigner",
+  "project",
   "column_break_mfzh",
   "active",
   "allocate_on_holiday",
@@ -372,6 +373,12 @@
    "fieldtype": "Table",
    "label": "Watchers",
    "options": "Task Watchers"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
   }
  ],
  "grid_page_length": 50,
@@ -379,7 +386,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-08-20 12:40:57.074943",
+ "modified": "2025-09-13 08:35:13.516505",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Master Tasks",

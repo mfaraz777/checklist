@@ -787,6 +787,13 @@ frappe.ui.form.on('Master Tasks', {
                query : 'checklist.api.user_with_employee_query',
             };
         };
+        frm.set_query('project', function() {
+            return {
+                filters: [
+                    ['name', 'not in', ['PROJ-0002', 'PROJ-0001']]
+                ]
+            };
+        });
     },
     refresh: function (frm) {
         if (frm.doc.task_type === 'Recurring') {

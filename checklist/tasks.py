@@ -61,7 +61,11 @@ def schedule_tasks():
                 "attachments": task_doc.attachments,
                 "from_time": task_doc.from_time,
                 "to_time": task_doc.to_time,
-                "project_name": "Checklist OneTime" if task_doc.task_type == "One-Time" else "Checklist Recurring",
+                "project_name": (
+                    task_doc.project if task_doc.project
+                    else "PROJ-0001" if task_doc.task_type == "One-Time"
+                    else "PROJ-0002"
+                ),
                 "allocate_on_holiday": task_doc.allocate_on_holiday,
                 "task_assigner": task_doc.task_assigner
             }
@@ -261,7 +265,7 @@ def create_task_for_employee(task_data, start_time, end_time, employee):
         # Create the task if it doesn't exist
         task = frappe.new_doc('Task')
         task.subject = task_data["subject"]
-        task.project = frappe.db.get_value("Project", {"project_name": task_data["project_name"]}, "name", cache=True)
+        task.project = frappe.db.get_value("Project", {"name": task_data["project_name"]}, "name", cache=True)
         task.type = frappe.db.get_value("Task Type", {"name": task_data["task_type"]}, "name", cache=True)
         task.status = "Open"
         task.custom_master_task = task_data["name"]

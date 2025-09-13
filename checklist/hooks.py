@@ -180,6 +180,12 @@ fixtures = [
     {"dt": "Workflow State"},
     {"dt": "Workflow Action Master"},
     {"dt": "Form Tour", "filters": [["name", "in", ["Checklist Settings", "Master Task"]]]},
+    {
+        "dt": "Recurring Task Template",
+        "filters": [
+            ["name", "in", ["File GST"]]
+        ]
+    }
 ]
 
 # Testing

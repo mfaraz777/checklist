@@ -1,0 +1,18 @@
+[
+ {
+  "details": "<div class=\"ql-editor read-mode\"><p>Pleae file the GST.</p></div>",
+  "docstatus": 0,
+  "doctype": "Recurring Task Template",
+  "end_date": "2026-04-10",
+  "interval_unit": "month",
+  "modified": "2025-09-13 08:30:39.464963",
+  "month_repeat_type": "{\"type\":\"date\",\"day\":10}",
+  "name": "File GST",
+  "repeat_days": "[]",
+  "repeat_interval": "1",
+  "start_date": "2025-05-10",
+  "subject": "File GST",
+  "task_type": "Recurring",
+  "year_repeat_type": null
+ }
+]
